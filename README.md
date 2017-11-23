@@ -8,9 +8,9 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
 ## Table of contents
 
  - [Installation](#installation)
- - [String](#string)
- - [Number](#number)
- - [Error management](#error)
+ - [String](#use-stringformat-for-string-formatting)
+ - [Number](#use-stringformat-pipe-for-number-formatting)
+ - [Error management](#error-management)
 
 ## Installation
 
@@ -46,7 +46,7 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
   }
   ```
 
-## Strings: Use stringFormat for string formatting
+## Use stringFormat for string formatting
 
 ### Typescript
 
@@ -74,7 +74,7 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
   <!-- Display: "Dear           Chuck          Norris" -->
   ```
 
-## Numbers: Use stringFormat pipe for number formatting
+## Use stringFormat pipe for number formatting
 
 ### Typescript
 
