@@ -31,6 +31,7 @@ describe('StringFormatPipe numbers', () => {
     const pipe = new StringFormatPipe();
     expect(pipe.transform('%.0d', 24)).to.equal('24');
     expect(pipe.transform('%.2d', 24)).to.equal('24.00');
+    expect(pipe.transform('%.2d', 24.001)).to.equal('24.00');
   });
   
 });

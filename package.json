@@ -1,6 +1,6 @@
 {
   "name": "ngx-stringformat",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Enjoy the String.format() java method as an Angular pipe",
   "main": "./dist/string-format.umd.js",
   "jsnext:main": "./dist/string-format.esm.js",

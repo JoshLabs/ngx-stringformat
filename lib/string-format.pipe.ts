@@ -46,7 +46,7 @@ export class StringFormatPipe implements PipeTransform {
     let precision = this.getPrecision(slice);
     let width = this.getWidth(slice);
     let arg = args[position == -1 ? index : position - 1];
-    let format: string = (width == -1 ? 1 : width) + '.' + (precision == -1 ? 2 : precision) + '-5';
+    let format: string = (width == -1 ? 1 : width) + '.' + (precision == -1 ? 2 : precision) + '-' + (precision == -1 ? 2 : precision);
     try {
       value = new DecimalPipe("en-US").transform(arg, format);
     }
