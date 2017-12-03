@@ -129,7 +129,7 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
 
 Locale is managed at the application level.
 
-Please consult the [Setting up the locale of your app] chapter(https://angular.io/guide/i18n#setting-up-the-locale-of-your-app) to change your LOCALE_ID in your @NgModule.
+Please consult the [Setting up the locale of your app](https://angular.io/guide/i18n#setting-up-the-locale-of-your-app) chapter to change your LOCALE_ID in your @NgModule.
 
 Nevertheless, the local can be set manually using at the component level.
   
