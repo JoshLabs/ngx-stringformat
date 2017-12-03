@@ -14,13 +14,13 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
 
 ## Installation
 
-1. Use npm to install the package
+### Use npm to install the package
 
   ```terminal
   $ npm install ngx-stringformat --save 
   ```
 
-2. Add into your module `imports` the `NgStringFormatModule` in order to add the pipe.
+### Add into your module `imports` the `NgStringFormatModule` in order to add the pipe.
 
   ```typescript
   import {NgStringFormatModule} from 'ngx-stringformat';
@@ -34,7 +34,7 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
   })
   ```
 
-3. Pipes are also injectable and can be used in Components / Services / etc..
+### Pipes are also injectable and can be used in Components / Services / etc..
 
   ```typescript  
   import { StringFormatPipe } from 'ngx-stringformat';
@@ -46,7 +46,7 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
   }
   ```
   
-4. Pipes can be created manually to change the locale
+### Pipes can be created manually to change the locale
 
   ```typescript  
   import { StringFormatPipe } from 'ngx-stringformat';
@@ -60,7 +60,7 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
   }
   ```
 
-## Use stringFormat for string formatting
+## How to use use stringFormat pipe for string formatting
 
 ### Typescript
 
@@ -88,7 +88,7 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
   <!-- Display: "Dear           Chuck          Norris" -->
   ```
 
-## Use stringFormat pipe for number formatting
+## How to use stringFormat pipe for number formatting
 
 ### Typescript
 
@@ -125,11 +125,11 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
   <!-- Display: "My rate is:       120" -->
   ```
 
-## Change locale
+## How to change locale
 
 Locale is managed at the application level.
 
-Please consult the [Setting up the locale of your app] chapter(https://angular.io/guide/i18n#setting-up-the-locale-of-your-app) to change your LOCALE_ID.
+Please consult the [Setting up the locale of your app] chapter(https://angular.io/guide/i18n#setting-up-the-locale-of-your-app) to change your LOCALE_ID in your @NgModule.
 
 Nevertheless, the local can be set manually using at the component level.
   
