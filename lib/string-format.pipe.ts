@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform, LOCALE_ID } from '@angular/core';
+import { Pipe, PipeTransform, LOCALE_ID, Inject } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 
 const REG_INDEX = /[0-9]+\$/;
@@ -11,6 +11,12 @@ const REG = /%([0-9]+\$)?([0-9]*)?(\.[0-9]+)?(d|s)/g;
   name: 'stringFormat'
 })
 export class StringFormatPipe implements PipeTransform {
+
+  localeId: string;
+
+  constructor( @Inject(LOCALE_ID) private _localeId: string) {
+    this.localeId = _localeId;
+  }
 
   transform(value: any, ...args): any {
     let slices: Array<string> = this.getSlices(value);
@@ -48,7 +54,7 @@ export class StringFormatPipe implements PipeTransform {
     let arg = args[position == -1 ? index : position - 1];
     let format: string = (width == -1 ? 1 : width) + '.' + (precision == -1 ? 2 : precision) + '-' + (precision == -1 ? 2 : precision);
     try {
-      value = new DecimalPipe("en-US").transform(arg, format);
+      value = new DecimalPipe(this.localeId).transform(arg, format);
     }
     catch (e) { return '[Error! Cannot parse value as a number: (' + arg + ')]' }
     return value;
