@@ -37,11 +37,25 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
 3. Pipes are also injectable and can be used in Components / Services / etc..
 
   ```typescript  
-  import {StringFormat} from 'ngx-stringformat';
+  import { StringFormatPipe } from 'ngx-stringformat';
 
   @Component()
   export class AppComponent {
-    constructor(private stringFormat: StringFormat) {}
+    constructor(private stringFormat: StringFormatPipe) {}
+    // ..
+  }
+  ```
+  
+4. Pipes can be created manually to change the locale
+
+  ```typescript  
+  import { StringFormatPipe } from 'ngx-stringformat';
+
+  @Component()
+  export class AppComponent {
+    evaluate() {
+      console.log(new StringFormatPipe('fr-FR').transform('%d', 24));
+    }
     // ..
   }
   ```
@@ -90,9 +104,6 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
   
   this.stringFormat.transform('I am %.0d years old' | 36);
   // Returns: "I am 36 years old"
-  
-  this.stringFormat.transform('My rate is:%10' | 120);
-  // Returns: "My rate is:       120"
   ```
 
 ### Html
@@ -114,7 +125,27 @@ Try the StringFormat pipe online using [this website](https://string.surge.sh)
   <!-- Display: "My rate is:       120" -->
   ```
 
-## Error management
+## Change locale
+
+Locale is managed at the application level.
+
+Please consult the [Setting up the locale of your app] chapter(https://angular.io/guide/i18n#setting-up-the-locale-of-your-app) to change your LOCALE_ID.
+
+Nevertheless, the local can be set manually using at the component level.
+  
+  ```typescript  
+  import { StringFormatPipe } from 'ngx-stringformat';
+
+  @Component()
+  export class AppComponent {
+    evaluate() {
+      console.log(new StringFormatPipe('fr-FR').transform('%d', 24));
+    }
+    // ..
+  }
+  ```
+  
+## Error messages
   
 ### Index not found
   
